@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lets Get To Know Me!</title>
+    <title>Let's Get To Know Me!</title>
     <link rel="stylesheet" href="css/style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -11,25 +11,36 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="js/scroll.js" defer></script>
   </head>
   <body>
-    <main class="container">
-      <h1>Hi, I'm Ghanianda Wafiqarifah</h1>
+    <main class="container text-center">
+      <h1 class="scroll-animation">Hi, I'm Ghanianda Wafiqarifah</h1>
+      <br />
       <a href="https://instagram.com/ghaniandaa/" target="_blank">
         <img
           src="img/Foto Fiqa IEEE.png"
-          alt="yah km gk hoki bs liat kecantikanku"
+          alt="Foto Ghanianda Wafiqarifah"
           width="200"
           title="Aku Wafi!"
-          class="imgprof"
+          class="imgprof scroll-animation"
         />
       </a>
-      <p>
+      <br />
+      <br />
+      <p class="scroll-animation">
         <b>Wafi</b> is a passionate computer science student at IPB University
         with a deep love for novels, movies, and webtoons. She has a sweet spot
         for ice cream and enjoys engaging in thought-provoking discussions.
@@ -38,75 +49,80 @@
         via direct message on Instagram for a chat or to share your favorite
         stories and ideas!
       </p>
-      <a
-        class="btn btn-primary"
-        href="https://www.instagram.com/ghaniandaa/"
-        role="button"
-        >Get to know me!
-      </a>
+      <div class="popup-overlay"></div>
+      <div class="popup">
+        <p id="popup-text">This is a placeholder text for the popup.</p>
+      </div>
+
+      <!-- Trigger Text -->
+      <p class="popup-trigger">Click here to see a fun fact about Wafi!</p>
+
+      <br />
+      <br />
       <hr />
-      <a class="gtm" target="_blank">
-        <img
-          src="img/1.png"
-          alt="Yh gk hoki lg"
-          width="100"
-          tittle="ghanianda's fav"
-        />
-      </a>
-      <a class="gtm" target="_blank">
-        <img
-          src="img/2.png"
-          alt="Yh gk hoki lg"
-          width="100"
-          tittle="ghanianda's fav"
-        />
-      </a>
-      <a class="gtm" target="_blank">
-        <img
-          src="img/3.png"
-          alt="Yh gk hoki lg"
-          width="100"
-          tittle="ghanianda's fav"
-        />
-      </a>
+      <br />
+      <br /><br />
+      <br />
+      <div class="gtm scroll-animation">
+        <a href="https://youtu.be/zSWdZVtXT7E?feature=shared" target="_blank">
+          <img
+            src="img/1.png"
+            alt="Favorite Image 1"
+            width="200"
+            title="Ghanianda's Favorite"
+          />
+        </a>
+        <a
+          href="https://www.webtoons.com/en/fantasy/your-throne/list?title_no=2009"
+          target="_blank"
+        >
+          <img
+            src="img/2.png"
+            alt="Favorite Image 2"
+            width="200"
+            title="Ghanianda's Favorite"
+          />
+        </a>
+        <a
+          href="https://www.goodreads.com/book/show/128029.A_Thousand_Splendid_Suns"
+          target="_blank"
+        >
+          <img
+            src="img/3.png"
+            alt="Favorite Image 3"
+            width="200"
+            title="Ghanianda's Favorite"
+          />
+        </a>
+      </div>
+      <br />
+      <br />
+      <br />
+      <br />
       <hr />
-      <h1>Connect With Me!</h1>
-      <a
-        class="socmedlogos"
-        href="https://www.linkedin.com/in/ghaniandawafiqarifah/"
-        target="_blank"
-      >
-        <img
-          src="img/linkedin.jpg"
-          alt="linkedin"
-          width="25"
-          tittle="Akun Linkedin Wafi"
-        />
-      </a>
-      <a
-        class="socmedlogos"
-        href="https://www.instagram.com/ghaniandaa/"
-        target="_blank"
-      >
-        <img
-          src="img/instagram.png"
-          alt="instagram"
-          width="25"
-          tittle="Akun Instagram Wafi"
-        />
-      </a>
-      <a
-        class="socmedlogos"
-        href="mailto:itsmeghanianda@apps.ipb.ac.id?subject=Hi&body=Nm%20km%20syp%20ia%20???%20"
-        target="_blank"
-      >
-        <img
-          src="img/gmail.png"
-          alt="gmail"
-          width="30"
-          tittle="Akun Gmail Wafi"
-        />
-      </a>
+      <div class="motto-container scroll-animation">
+        <p class="motto-text">“Astra Inclinant Sed Non Obligant”</p>
+      </div>
+
+      <hr />
+      <h2 class="scroll-animation">Connect With Me!</h2>
+      <div class="social-icons scroll-animation">
+        <a href="https://www.instagram.com/ghaniandaa/" title="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/ghaniandawafiqarifah/"
+          title="LinkedIn"
+        >
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a
+          href="mailto:itsmeghanianda@apps.ipb.ac.id?subject=Hi&body=Nm%20km%20syp%20ia%20???%20"
+          title="Email"
+        >
+          <i class="fa-regular fa-envelope"></i>
+        </a>
+      </div>
     </main>
   </body>
 </html>

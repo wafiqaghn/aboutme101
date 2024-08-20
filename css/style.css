@@ -1,101 +1,261 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:wght@400;700&display=swap");
+
+/* Animasi fade-in dari bawah */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Global Styles */
+html,
 body {
-  background-color: white;
-}
-h1 {
-  color: navy;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 50;
+  height: 100%;
+  margin: 0;
   padding: 0;
+  background-color: #a7c4d6; /* Warna latar belakang halaman */
 }
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #ccd0cf;
+}
+
+/* Container Styling */
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* Transparansi latar belakang container */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Header Styling */
+h1 {
+  color: #4a5c6a;
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: "DM Serif Text", serif; /* Font untuk header */
+}
+h2 {
+  color: #4a5c6a;
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: "DM Serif Text", serif; /* Font untuk header */
+}
+
+/* Paragraph Styling */
+p {
+  color: #4a5c6a;
+  line-height: 1.6;
+  text-align: center;
+  margin: 20px 0;
+}
+/* Animasi muncul */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Popup overlay styling */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none; /* Hidden by default */
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+/* Popup box styling */
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  max-width: 80%;
+  max-height: 80%;
+  overflow-y: auto;
+  z-index: 1001;
+  display: none; /* Hidden by default */
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  transform: translate(-50%, -60%) scale(0.9);
+}
+
+/* Popup visible */
+.popup.show {
+  display: block;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Popup overlay visible */
+.popup-overlay.show {
+  display: block;
+  opacity: 1;
+}
+
+/* Popup header styling */
+.popup p {
+  font-family: "Roboto", sans-serif; /* Font for the popup text */
+  margin: 0;
+  font-size: 16px;
+}
+
+/* Trigger text styling */
+.popup-trigger {
+  cursor: pointer;
+  color: #4a5c6a;
+  text-decoration: underline;
+  font-family: "Roboto", sans-serif;
+  animation: fadeIn 2s ease-out; /* Add animation to the trigger */
+  display: inline-block; /* Ensure the animation is applied */
+}
+
+/* Profile Image Styling */
 .imgprof {
-  float: right;
-  top: -70px;
-  position: relative;
-  margin-right: 0px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
 }
-a {
-  text-decoration: none;
-  color: cadetblue;
-}
-.socmedlogos {
-  padding: 20px;
-  font-size: 30px;
-  width: 50px;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 2px;
-  opacity: 1;
-  transition: 0.3s;
-}
-.socmedlogos:hover {
-  opacity: 0.5;
-}
+
+/* Favorite Images Styling */
 .gtm {
-  border-radius: 10%;
-  padding: 20px;
-  font-size: 30px;
-  width: 100px;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 2px;
-  opacity: 1;
-  transition: 0.3s;
+  display: flex;
   justify-content: center;
-}
-.gtm:hover {
-  opacity: 0.5;
-}
-
-/* 
-  ##Device = Desktops
-  ##Screen = 1281px to higher resolution desktops
-*/
-
-@media (min-width: 1281px) {
-  /* CSS */
+  gap: 100px;
+  flex-wrap: wrap;
 }
 
-/* 
-  ##Device = Laptops, Desktops
-  ##Screen = B/w 1025px to 1280px
-*/
-
-@media (min-width: 1025px) and (max-width: 1280px) {
-  /* CSS */
+.gtm a img {
+  border-radius: 10px;
+  transition: transform 0.3s ease;
 }
 
-/* 
-  ##Device = Tablets, Ipads (portrait)
-  ##Screen = B/w 768px to 1024px
-*/
-
-@media (min-width: 768px) and (max-width: 1024px) {
-  /* CSS */
+.gtm a img:hover {
+  transform: scale(1.1);
 }
 
-/* 
-  ##Device = Tablets, Ipads (landscape)
-  ##Screen = B/w 768px to 1024px
-*/
-
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-  /* CSS */
+/* Motto Container Styling */
+.motto-container {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+  position: relative;
 }
 
-/* 
-  ##Device = Low Resolution Tablets, Mobiles (Landscape)
-  ##Screen = B/w 481px to 767px
-*/
-
-@media (min-width: 481px) and (max-width: 767px) {
-  /* CSS */
+/* Motto Text Styling */
+.motto-text {
+  font-family: "DM Serif Text", serif; /* Font untuk kutipan */
+  font-size: 2em;
+  font-weight: 700;
+  color: #333;
+  line-height: 1.5em;
+  position: relative;
+  display: inline-block;
+  padding: 20px;
+  background-color: #e3eef3; /* Warna latar belakang kutipan */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* 
-  ##Device = Most of the Smartphones Mobiles (Portrait)
-  ##Screen = B/w 320px to 479px
-*/
+/* Scroll Animation Styles */
+.scroll-animation {
+  opacity: 0;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
 
-@media (min-width: 320px) and (max-width: 480px) {
-  /* CSS */
+.scroll-animation.fade-in-up {
+  animation: fadeInUp 0.8s forwards;
+}
+
+/* Konten tambahan yang tersembunyi pada awalnya */
+#additional-content {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+#additional-content.scroll-animation {
+  opacity: 1; /* Tampilkan konten setelah animasi selesai */
+}
+.social-icons {
+  padding: 20px;
+  text-align: center;
+}
+
+.social-icons a {
+  color: #4a5c6a;
+  line-height: 20px;
+  font-size: 30px;
+  margin: 0 15px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #9ba8ab;
+}
+
+.social-icons a i {
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover i {
+  transform: scale(1.5);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .social-icons a {
+    font-size: 24px;
+    margin: 0 10px;
+  }
+
+  .gtm {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 15px;
+  }
+
+  .social-icons a {
+    font-size: 20px;
+    margin: 0 8px;
+  }
+
+  .gtm a img {
+    width: 80px;
+  }
 }
